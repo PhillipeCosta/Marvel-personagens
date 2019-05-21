@@ -32,21 +32,26 @@ $( "#search" ).keyup(function() {
 $( "#search" ).click(function() {
   CallingSerach();
 });
-$( "#search" ).focus(function() {
+$( "#search" ).focusin(function() {
   CallingSerach();
 });
+$( "#search" ).focusout(function() {
+  $('#result-personagem').hide();
+});
 
-var text = "";
+
 var i;
 for (i = 0; i < 5; i++) {
   a = i * 10;
-  console.log(a);
+  $('.content-pagination').append("<li data-offset="+a+">"+i+"</li>");
 }
 
-
+$( ".pagination li:first" ).addClass('active');
 $( ".pagination li" ).click(function() {
+  $( ".pagination li" ).removeClass('active');
   a = $(this).data('offset');
   CallingCaracteres(a);
+  $(this).addClass('active');
 });
 
 
