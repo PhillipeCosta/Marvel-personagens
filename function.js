@@ -2,7 +2,7 @@ var PRIV_KEY = "277f3d6b5cb309d26d568507b7ff6fc14c0e4445";
 var PUBLIC_KEY = "457a157c4110c8f90c0e3468120f7528";
 var ts = new Date().getTime();
 var hash = CryptoJS.MD5(ts + PRIV_KEY + PUBLIC_KEY).toString();
-var url = 'http://gateway.marvel.com/v1/public/characters';
+var url = 'https://gateway.marvel.com/v1/public/characters';
 
 
 function CallingSerach(){
@@ -35,6 +35,13 @@ $( "#search" ).click(function() {
 $( "#search" ).focus(function() {
   CallingSerach();
 });
+
+var text = "";
+var i;
+for (i = 0; i < 5; i++) {
+  a = i * 10;
+  console.log(a);
+}
 
 
 $( ".pagination li" ).click(function() {
