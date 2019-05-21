@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Personagens da Marvel</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="loading loadingActive"><i class="spinner"></i></div>
+  <div class="container">
+
+    <header>
+      <h1>BUSCA MARVEL <span>Teste Front-End</span></h1>
+      <h3>Carlos Phillipe Costa dos Santos</h3>
+    </header>
+
+    <div class="busca-personagem">
+      <p>Nome do Personagem</p>
+      <input type="text" name="search" id="search" placeholder="Digite o nome do personagem" />
+
+      <ul id="result-personagem"></ul>
+    </div>
+
+    <div class="table-resultado">
+      <table>
+        <thead>
+          <tr>
+            <th class="personagem-tit">Personagem</th>
+            <th class="series-tit">Séries</th>
+            <th class="eventos-tit">Eventos</th>
+          </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+
+      </table>
+
+      <ul class="pagination">
+        <li class="left"><span></span></li>
+        <li data-offset='0'>1</li>
+        <li data-offset='10'>2</li>
+        <li data-offset='20'>3</li>
+        <li data-offset='30'>4</li>
+        <li data-offset='40'>5</li>
+        <li data-offset='50'>6</li>
+        <li class="right"><span></span></li>
+      </ul>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" charset="utf-8"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.min.js" charset="utf-8"></script>
+  <script src="function.js" charset="utf-8"></script>
+</body>
+</html>
